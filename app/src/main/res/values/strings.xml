@@ -2,12 +2,36 @@
 <resources>
     <string name="app_name">GymTras</string>
     <string name="header_title">GymTras</string>
-    <string name="header_subtitle">Bitácora de Entrenamiento • Registra tu progreso</string>
+    <string name="header_subtitle">Bitácora de Entrenamiento • Domina tu progreso</string>
 
-    <!-- Bottom Navigation -->
-    <string name="nav_title_routines">Rutinas</string>
+    <!-- Navigation Drawer -->
+    <string name="nav_title_home">Inicio</string>
+    <string name="nav_title_routines">Mis Rutinas</string>
     <string name="nav_title_new_log">Registrar</string>
     <string name="nav_title_history">Bitácora</string>
+    <string name="nav_title_exercises">Ejercicios</string>
+
+    <!-- Home Dashboard -->
+    <string name="home_welcome_title">¡Hola, Atleta! 👋</string>
+    <string name="home_welcome_subtitle">Listo para superar tus marcas de hoy</string>
+
+    <string name="title_last_routine">ÚLTIMA RUTINA</string>
+    <string name="btn_continue_routine">ENTRENAR AHORA</string>
+
+    <string name="cta_create_first_routine_title">¿Aún no tienes una rutina?</string>
+    <string name="cta_create_first_routine_sub">Crea tu plantilla personalizada agregando ejercicios, peso y tiempos de descanso.</string>
+    <string name="btn_create_routine_now">+ CREAR MI PRIMERA RUTINA</string>
+
+    <string name="section_quick_exercises">BIBLIOTECA DE EJERCICIOS</string>
+
+    <!-- Muscle Groups -->
+    <string name="muscle_all">Todos</string>
+    <string name="muscle_chest">Pecho</string>
+    <string name="muscle_back">Espalda</string>
+    <string name="muscle_legs">Piernas</string>
+    <string name="muscle_shoulders">Hombros</string>
+    <string name="muscle_arms">Brazos</string>
+    <string name="muscle_core">Core / Abdomen</string>
 
     <!-- Section Titles -->
     <string name="section_exercise_info">INFORMACIÓN DEL EJERCICIO</string>
@@ -76,6 +100,7 @@
     <string name="stat_epic_count">Épicas 🔥</string>
     <string name="stat_max_weight">Peso Máx.</string>
     <string name="hint_search_log">Buscar por ejercicio, rutina o notas…</string>
+    <string name="hint_search_exercise">Buscar ejercicio por nombre o músculo…</string>
     <string name="empty_log_title">Sin entrenamientos en la bitácora</string>
     <string name="empty_log_subtitle">Registra tu primer entrenamiento para comenzar a medir tu progreso.</string>
     <string name="tag_epic">🔥 ÉPICA</string>
