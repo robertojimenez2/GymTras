@@ -33,6 +33,7 @@ class QuickLogFragment : Fragment() {
         setupSpinner()
         setupDatePicker()
         setupSaveButton()
+        setupFocusAutoScroll()
     }
 
     private fun setupSpinner() {
@@ -66,6 +67,23 @@ class QuickLogFragment : Fragment() {
                 calendar.get(Calendar.DAY_OF_MONTH)
             ).show()
         }
+    }
+
+    private fun setupFocusAutoScroll() {
+        val focusListener = View.OnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) {
+                binding.scrollView.postDelayed({
+                    binding.scrollView.smoothScrollTo(0, v.bottom + 120)
+                }, 150)
+            }
+        }
+
+        binding.etNombreEjercicio.onFocusChangeListener = focusListener
+        binding.etPeso.onFocusChangeListener = focusListener
+        binding.etDescanso.onFocusChangeListener = focusListener
+        binding.etSeries.onFocusChangeListener = focusListener
+        binding.etRepeticiones.onFocusChangeListener = focusListener
+        binding.etNotas.onFocusChangeListener = focusListener
     }
 
     private fun setupSaveButton() {

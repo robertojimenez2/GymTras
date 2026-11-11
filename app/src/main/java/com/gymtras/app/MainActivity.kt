@@ -13,6 +13,7 @@ import com.gymtras.app.ui.ExercisesCatalogFragment
 import com.gymtras.app.ui.HomeDashboardFragment
 import com.gymtras.app.ui.RoutineEditorFragment
 import com.gymtras.app.ui.WorkoutLogFragment
+import kotlin.math.max
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,8 +38,18 @@ class MainActivity : AppCompatActivity() {
     private fun setupWindowInsets() {
         ViewCompat.setOnApplyWindowInsetsListener(binding.drawerLayout) { _, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            val ime = insets.getInsets(WindowInsetsCompat.Type.ime())
+
+            // Top padding for toolbar to clear notch / status bar
             binding.toolbar.setPadding(0, systemBars.top, 0, 0)
+
+            // Bottom inset for fragmentContainer: expands padding when software keyboard (IME) opens
+            val bottomInset = max(systemBars.bottom, ime.bottom)
+            binding.fragmentContainer.setPadding(0, 0, 0, bottomInset)
+
+            // Drawer insets
             binding.navView.setPadding(0, systemBars.top, 0, systemBars.bottom)
+
             insets
         }
     }

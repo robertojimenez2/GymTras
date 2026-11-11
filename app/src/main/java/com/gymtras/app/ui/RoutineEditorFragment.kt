@@ -33,6 +33,7 @@ class RoutineEditorFragment : Fragment() {
         setupSpinner()
         setupRecyclerView()
         setupButtons()
+        setupFocusAutoScroll()
     }
 
     private fun setupSpinner() {
@@ -54,6 +55,23 @@ class RoutineEditorFragment : Fragment() {
         binding.rvRoutineExercises.layoutManager = LinearLayoutManager(requireContext())
         binding.rvRoutineExercises.adapter = adapter
         updateExerciseCount()
+    }
+
+    private fun setupFocusAutoScroll() {
+        val focusListener = View.OnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) {
+                binding.scrollView.postDelayed({
+                    binding.scrollView.smoothScrollTo(0, v.bottom + 120)
+                }, 150)
+            }
+        }
+
+        binding.etRoutineName.onFocusChangeListener = focusListener
+        binding.etExerciseName.onFocusChangeListener = focusListener
+        binding.etExerciseWeight.onFocusChangeListener = focusListener
+        binding.etExerciseRest.onFocusChangeListener = focusListener
+        binding.etExerciseSets.onFocusChangeListener = focusListener
+        binding.etExerciseReps.onFocusChangeListener = focusListener
     }
 
     private fun setupButtons() {
