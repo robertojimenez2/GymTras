@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_dark_charcoal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:clipToPadding="false">
+
+        <!-- HEADER CARD -->
+        <LinearLayout
+            android:id="@+id/headerLogContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_dark"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_history"
+                app:tint="@color/primary_neon_lime" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_workout_log"
+                    android:textColor="@color/primary_neon_lime"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subtitle_workout_log"
+                    android:textColor="@color/text_secondary_dark"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- STATS CARD -->
+        <LinearLayout
+            android:id="@+id/cardStats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_dark"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/headerLogContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Stat 1: Total Workouts -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStatTotalWorkouts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_neon_lime"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stat_total_workouts"
+                    android:textColor="@color/text_secondary_dark"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/surface_input_stroke" />
+
+            <!-- Stat 2: Epic Sessions -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStatEpicCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/accent_epic_orange"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stat_epic_count"
+                    android:textColor="@color/text_secondary_dark"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/surface_input_stroke" />
+
+            <!-- Stat 3: Max Weight -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStatMaxWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary_electric_cyan"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="120kg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stat_max_weight"
+                    android:textColor="@color/text_secondary_dark"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- SEARCH / FILTER BAR -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSearchLog"
+            style="@style/Widget.GymTras.TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/hint_search_log"
+            app:startIconDrawable="@drawable/ic_search"
+            app:layout_constraintTop_toBottomOf="@id/cardStats"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearchLog"
+                style="@style/Widget.GymTras.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- RECYCLERVIEW BITÁCORA -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWorkoutLog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:nestedScrollingEnabled="false"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_workout_log_entry"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilSearchLog" />
+
+        <!-- EMPTY STATE -->
+        <LinearLayout
+            android:id="@+id/emptyLogStateContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilSearchLog">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_history"
+                app:tint="@color/text_secondary_dark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/empty_log_title"
+                android:textColor="@color/text_primary_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/empty_log_subtitle"
+                android:textColor="@color/text_secondary_dark"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

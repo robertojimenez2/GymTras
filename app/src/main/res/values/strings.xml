@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GymTras</string>
+    <string name="header_title">GymTras</string>
+    <string name="header_subtitle">Bitácora de Entrenamiento • Registra tu progreso</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_title_routines">Rutinas</string>
+    <string name="nav_title_new_log">Registrar</string>
+    <string name="nav_title_history">Bitácora</string>
+
+    <!-- Section Titles -->
+    <string name="section_exercise_info">INFORMACIÓN DEL EJERCICIO</string>
+    <string name="section_metrics">MÉTRICAS DE LA SESIÓN</string>
+    <string name="section_details">DETALLES ADICIONALES</string>
+
+    <!-- Field Hints & Labels -->
+    <string name="label_exercise_name">Nombre del ejercicio</string>
+    <string name="hint_exercise_name">Ej: Press de banca plano con barra</string>
+
+    <string name="label_category">Objetivo / Categoría</string>
+
+    <string name="label_equipment">Tipo de equipo</string>
+    <string name="equipment_barbell">Barra libre</string>
+    <string name="equipment_dumbbells">Mancuernas</string>
+    <string name="equipment_machine">Máquina</string>
+    <string name="equipment_bodyweight">Peso corporal</string>
+
+    <string name="label_weight">Peso utilizado</string>
+    <string name="hint_weight">0.0</string>
+    <string name="unit_kg">kg</string>
+
+    <string name="label_sets">Series</string>
+    <string name="hint_sets">4</string>
+
+    <string name="label_reps">Repeticiones</string>
+    <string name="hint_reps">10</string>
+
+    <string name="label_rest">Descanso entre series</string>
+    <string name="hint_rest">90</string>
+    <string name="unit_sec">seg</string>
+
+    <string name="label_date">Fecha del entrenamiento</string>
+    <string name="hint_date">Seleccionar fecha</string>
+
+    <string name="label_epic_session">¿Sesión épica?</string>
+    <string name="epic_text_on">🔥 ¡ÉPICA!</string>
+    <string name="epic_text_off">Normal</string>
+
+    <string name="label_notes">Notas adicionales</string>
+    <string name="hint_notes">Escribe sensaciones, RPE o ajustes para la próxima sesión…</string>
+
+    <!-- Buttons & Messages -->
+    <string name="btn_save_workout">GUARDAR ENTRENAMIENTO</string>
+    <string name="toast_workout_saved">💪 ¡Entrenamiento registrado!\n%1$s | %2$s kg | %3$s series x %4$s reps</string>
+    <string name="error_fill_required">Por favor, ingresa el nombre del ejercicio</string>
+
+    <!-- Routine Registration Screen -->
+    <string name="title_routine_editor">Registrar Rutina</string>
+    <string name="subtitle_routine_editor">Diseña tu plantilla personalizada con ejercicios y descansos</string>
+    <string name="label_routine_name">Nombre de la rutina</string>
+    <string name="hint_routine_name">Ej: Rutina A - Pecho, Hombro &amp; Tríceps</string>
+    <string name="label_add_exercise_to_routine">AGREGAR EJERCICIO A LA RUTINA</string>
+    <string name="btn_add_exercise">+ AGREGAR EJERCICIO A LA LISTA</string>
+    <string name="label_exercise_list">EJERCICIOS EN LA RUTINA (%1$d)</string>
+    <string name="btn_save_routine">GUARDAR RUTINA COMPLETA</string>
+    <string name="toast_routine_saved">💪 ¡Rutina \"%1$s\" guardada con %2$d ejercicios!</string>
+    <string name="toast_exercise_added">Ejercicio \"%1$s\" agregado a la rutina</string>
+    <string name="error_routine_empty">Agrega al menos un ejercicio a la rutina</string>
+    <string name="error_routine_name_required">Ingresa el nombre de la rutina</string>
+
+    <!-- Workout Log / Bitácora Screen -->
+    <string name="title_workout_log">Bitácora de Entrenamientos</string>
+    <string name="subtitle_workout_log">Historial de tus sesiones y progreso registrado</string>
+    <string name="stat_total_workouts">Sesiones</string>
+    <string name="stat_epic_count">Épicas 🔥</string>
+    <string name="stat_max_weight">Peso Máx.</string>
+    <string name="hint_search_log">Buscar por ejercicio, rutina o notas…</string>
+    <string name="empty_log_title">Sin entrenamientos en la bitácora</string>
+    <string name="empty_log_subtitle">Registra tu primer entrenamiento para comenzar a medir tu progreso.</string>
+    <string name="tag_epic">🔥 ÉPICA</string>
+    <string name="tag_normal">NORMAL</string>
+
+    <!-- Category Spinner Array -->
+    <string-array name="categorias_array">
+        <item>Fuerza</item>
+        <item>Hipertrofia (Masa Muscular)</item>
+        <item>Resistencia</item>
+        <item>Cardio</item>
+        <item>Pérdida de Peso</item>
+    </string-array>
+</resources>

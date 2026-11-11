@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand & Accent Colors -->
+    <color name="primary_neon_lime">#C6FF00</color>
+    <color name="primary_neon_lime_variant">#AEEA00</color>
+    <color name="on_primary_dark">#0D1B00</color>
+
+    <color name="secondary_electric_cyan">#00E5FF</color>
+    <color name="accent_epic_orange">#FF6D00</color>
+    <color name="epic_flame_red">#FF3D00</color>
+
+    <!-- Dark Theme Backgrounds & Surfaces (Modern-Fit Base) -->
+    <color name="bg_dark_charcoal">#121212</color>
+    <color name="surface_dark_card">#1E1E1E</color>
+    <color name="surface_input_field">#262626</color>
+    <color name="surface_input_stroke">#3D3D3D</color>
+    <color name="surface_input_stroke_focus">#C6FF00</color>
+
+    <!-- Light Theme Backgrounds & Surfaces -->
+    <color name="bg_light">#F4F5F7</color>
+    <color name="surface_light_card">#FFFFFF</color>
+    <color name="surface_light_input">#F0F0F0</color>
+    <color name="surface_light_stroke">#E0E0E0</color>
+
+    <!-- Typography Colors -->
+    <color name="text_primary_dark">#FFFFFF</color>
+    <color name="text_secondary_dark">#B0B0B0</color>
+    <color name="text_primary_light">#1A1A1A</color>
+    <color name="text_secondary_light">#666666</color>
+
+    <!-- Basic & Status Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_error">#FF5252</color>
+    <color name="color_success">#00E676</color>
+    <color name="divider_color">#2C2C2C</color>
+</resources>

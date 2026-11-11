@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="@color/surface_dark_card"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp"
+    app:strokeColor="@color/surface_input_stroke"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Epic / Normal Status Badge -->
+        <TextView
+            android:id="@+id/tvLogEpicBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_toggle_epic_on"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="@string/tag_epic"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLogExerciseName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/text_primary_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Press Militar con Barra"
+            app:layout_constraintEnd_toStartOf="@id/tvLogEpicBadge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Date & Category -->
+        <LinearLayout
+            android:id="@+id/subInfoContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLogExerciseName">
+
+            <TextView
+                android:id="@+id/tvLogDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary_dark"
+                android:textSize="12sp"
+                tools:text="📅 14/10/2026" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:text="•"
+                android:textColor="@color/text_secondary_dark" />
+
+            <TextView
+                android:id="@+id/tvLogCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_neon_lime"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="Hipertrofia" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:text="•"
+                android:textColor="@color/text_secondary_dark" />
+
+            <TextView
+                android:id="@+id/tvLogEquipment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/secondary_electric_cyan"
+                android:textSize="12sp"
+                tools:text="Barra libre" />
+        </LinearLayout>
+
+        <!-- Metric Chips Grid -->
+        <LinearLayout
+            android:id="@+id/logChipsContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subInfoContainer">
+
+            <TextView
+                android:id="@+id/tvLogWeightChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_chip_lime"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:textColor="@color/primary_neon_lime"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                tools:text="🏋️ 65.0 kg" />
+
+            <TextView
+                android:id="@+id/tvLogSetsRepsChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_chip_dark"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:textColor="@color/text_primary_dark"
+                android:textSize="13sp"
+                tools:text="4 series x 12 reps" />
+
+            <TextView
+                android:id="@+id/tvLogRestChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_cyan"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:textColor="@color/secondary_electric_cyan"
+                android:textSize="13sp"
+                tools:text="⏱ 90s" />
+        </LinearLayout>
+
+        <!-- Notes Preview -->
+        <TextView
+            android:id="@+id/tvLogNotes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_chip_dark"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="8dp"
+            android:textColor="@color/text_secondary_dark"
+            android:textSize="12sp"
+            tools:text="📝 Excelente control en la fase excéntrica. Subir 2.5kg la próxima semana."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logChipsContainer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

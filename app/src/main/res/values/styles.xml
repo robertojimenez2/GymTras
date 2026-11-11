@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Section Header Title Style -->
+    <style name="Widget.GymTras.SectionTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/text_section_title</item>
+        <item name="android:textColor">@color/primary_neon_lime</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+    <!-- Custom Outlined TextInputLayout Style -->
+    <style name="Widget.GymTras.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/surface_input_field</item>
+        <item name="boxStrokeColor">@color/surface_input_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius_medium</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius_medium</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius_medium</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius_medium</item>
+        <item name="hintTextColor">@color/primary_neon_lime</item>
+        <item name="startIconTint">@color/primary_neon_lime</item>
+        <item name="suffixTextColor">@color/primary_neon_lime</item>
+        <item name="android:textColorHint">@color/text_secondary_dark</item>
+    </style>
+
+    <!-- Custom TextInputEditText Style -->
+    <style name="Widget.GymTras.EditText" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">@color/text_primary_dark</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+
+    <!-- RadioButton Style -->
+    <style name="Widget.GymTras.RadioButton" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/text_primary_dark</item>
+        <item name="android:textSize">14sp</item>
+        <item name="buttonTint">@color/primary_neon_lime</item>
+        <item name="android:paddingStart">6dp</item>
+    </style>
+
+    <!-- ToggleButton Style for Epic Session -->
+    <style name="Widget.GymTras.ToggleButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_toggle_epic_selector</item>
+        <item name="android:textColor">@color/text_primary_dark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!-- Primary Action Button Style -->
+    <style name="Widget.GymTras.Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/primary_neon_lime</item>
+        <item name="android:textColor">@color/on_primary_dark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_button</item>
+        <item name="cornerRadius">@dimen/corner_radius_button</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:elevation">@dimen/button_elevation</item>
+    </style>
+
+</resources>

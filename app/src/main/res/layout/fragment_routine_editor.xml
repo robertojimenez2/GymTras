@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_dark_charcoal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:clipToPadding="false">
+
+        <!-- HEADER CARD -->
+        <LinearLayout
+            android:id="@+id/headerRoutineContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_dark"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_routine"
+                app:tint="@color/primary_neon_lime" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_routine_editor"
+                    android:textColor="@color/primary_neon_lime"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subtitle_routine_editor"
+                    android:textColor="@color/text_secondary_dark"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ROUTINE INFO CARD -->
+        <LinearLayout
+            android:id="@+id/cardRoutineInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_dark"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/headerRoutineContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilRoutineName"
+                style="@style/Widget.GymTras.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_routine_name"
+                app:startIconDrawable="@drawable/ic_routine">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRoutineName"
+                    style="@style/Widget.GymTras.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_routine_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/label_category"
+                android:textColor="@color/text_secondary_dark"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_spinner">
+
+                <Spinner
+                    android:id="@+id/spRoutineCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="12dp"
+                    android:spinnerMode="dropdown" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- ADD EXERCISE CARD -->
+        <LinearLayout
+            android:id="@+id/cardAddExercise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_dark"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/cardRoutineInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                style="@style/Widget.GymTras.SectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_add_exercise_to_routine" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilExerciseName"
+                style="@style/Widget.GymTras.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/label_exercise_name"
+                app:startIconDrawable="@drawable/ic_dumbbell">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etExerciseName"
+                    style="@style/Widget.GymTras.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_exercise_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Row 1: Weight & Rest -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilExerciseWeight"
+                    style="@style/Widget.GymTras.TextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:hint="@string/label_weight"
+                    app:startIconDrawable="@drawable/ic_weight"
+                    app:suffixText="@string/unit_kg">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etExerciseWeight"
+                        style="@style/Widget.GymTras.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_weight"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilExerciseRest"
+                    style="@style/Widget.GymTras.TextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:hint="@string/label_rest"
+                    app:startIconDrawable="@drawable/ic_timer"
+                    app:suffixText="@string/unit_sec">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etExerciseRest"
+                        style="@style/Widget.GymTras.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_rest"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Row 2: Sets & Reps -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilExerciseSets"
+                    style="@style/Widget.GymTras.TextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:hint="@string/label_sets"
+                    app:startIconDrawable="@drawable/ic_repeat">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etExerciseSets"
+                        style="@style/Widget.GymTras.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_sets"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilExerciseReps"
+                    style="@style/Widget.GymTras.TextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:hint="@string/label_reps"
+                    app:startIconDrawable="@drawable/ic_repeat">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etExerciseReps"
+                        style="@style/Widget.GymTras.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_reps"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddExerciseToRoutine"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/btn_add_exercise"
+                android:textColor="@color/primary_neon_lime"
+                android:textStyle="bold"
+                app:strokeColor="@color/primary_neon_lime"
+                app:strokeWidth="1.5dp" />
+
+        </LinearLayout>
+
+        <!-- ADDED EXERCISES LIST SECTION -->
+        <TextView
+            android:id="@+id/tvExerciseListHeader"
+            style="@style/Widget.GymTras.SectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/label_exercise_list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardAddExercise" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRoutineExercises"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:nestedScrollingEnabled="false"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_routine_exercise"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvExerciseListHeader" />
+
+        <TextView
+            android:id="@+id/tvEmptyExercises"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/error_routine_empty"
+            android:textColor="@color/text_secondary_dark"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvExerciseListHeader" />
+
+        <!-- SAVE ROUTINE BUTTON -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveRoutine"
+            style="@style/Widget.GymTras.Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/btn_save_routine"
+            app:icon="@drawable/ic_routine"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconTint="@color/on_primary_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvRoutineExercises" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
