@@ -22,6 +22,8 @@
         <item name="hintTextColor">@color/primary_neon_lime</item>
         <item name="startIconTint">@color/primary_neon_lime</item>
         <item name="suffixTextColor">@color/primary_neon_lime</item>
+        <item name="placeholderTextColor">@color/text_secondary_dark</item>
+        <item name="expandedHintEnabled">true</item>
         <item name="android:textColorHint">@color/text_secondary_dark</item>
     </style>
 

@@ -87,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:hint="@string/label_exercise_name"
+                app:placeholderText="@string/hint_exercise_name"
                 app:startIconDrawable="@drawable/ic_dumbbell">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -94,7 +95,6 @@
                     style="@style/Widget.GymTras.EditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_exercise_name"
                     android:imeOptions="actionNext"
                     android:inputType="textCapWords"
                     android:maxLines="1" />
@@ -225,6 +225,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     android:hint="@string/label_weight"
+                    app:placeholderText="@string/hint_weight"
                     app:startIconDrawable="@drawable/ic_weight"
                     app:suffixText="@string/unit_kg">
 
@@ -233,7 +234,6 @@
                         style="@style/Widget.GymTras.EditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/hint_weight"
                         android:imeOptions="actionNext"
                         android:inputType="numberDecimal"
                         android:maxLines="1" />
@@ -247,6 +247,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
                     android:hint="@string/label_rest"
+                    app:placeholderText="@string/hint_rest"
                     app:startIconDrawable="@drawable/ic_timer"
                     app:suffixText="@string/unit_sec">
 
@@ -255,7 +256,6 @@
                         style="@style/Widget.GymTras.EditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/hint_rest"
                         android:imeOptions="actionNext"
                         android:inputType="number"
                         android:maxLines="1" />
@@ -277,6 +277,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     android:hint="@string/label_sets"
+                    app:placeholderText="@string/hint_sets"
                     app:startIconDrawable="@drawable/ic_repeat">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -284,7 +285,6 @@
                         style="@style/Widget.GymTras.EditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/hint_sets"
                         android:imeOptions="actionNext"
                         android:inputType="number"
                         android:maxLines="1" />
@@ -298,6 +298,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
                     android:hint="@string/label_reps"
+                    app:placeholderText="@string/hint_reps"
                     app:startIconDrawable="@drawable/ic_repeat">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -305,7 +306,6 @@
                         style="@style/Widget.GymTras.EditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/hint_reps"
                         android:imeOptions="actionNext"
                         android:inputType="number"
                         android:maxLines="1" />
@@ -341,6 +341,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:hint="@string/label_date"
+                app:placeholderText="@string/hint_date"
                 app:startIconDrawable="@drawable/ic_calendar">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -350,7 +351,6 @@
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:focusable="false"
-                    android:hint="@string/hint_date"
                     android:inputType="date" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -388,6 +388,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:hint="@string/label_notes"
+                app:placeholderText="@string/hint_notes"
                 app:startIconDrawable="@drawable/ic_notes">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -396,7 +397,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="top|start"
-                    android:hint="@string/hint_notes"
                     android:imeOptions="actionDone"
                     android:inputType="textMultiLine"
                     android:minLines="3" />

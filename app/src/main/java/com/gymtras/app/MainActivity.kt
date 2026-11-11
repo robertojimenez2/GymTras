@@ -5,6 +5,8 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.gymtras.app.databinding.ActivityMainBinding
 import com.gymtras.app.ui.ExercisesCatalogFragment
@@ -23,11 +25,21 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupWindowInsets()
         setupNavigationDrawer()
         setupBackPressHandler()
 
         if (savedInstanceState == null) {
             navigateToMenuItem(R.id.nav_home)
+        }
+    }
+
+    private fun setupWindowInsets() {
+        ViewCompat.setOnApplyWindowInsetsListener(binding.drawerLayout) { _, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            binding.toolbar.setPadding(0, systemBars.top, 0, 0)
+            binding.navView.setPadding(0, systemBars.top, 0, systemBars.bottom)
+            insets
         }
     }
 
